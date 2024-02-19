@@ -1,32 +1,38 @@
 Partie 1 :
-Création de l'interface IDao avec une méthode getData :
 
-Nous avons commencé par définir une interface nommée IDao, qui expose une méthode getData. Cette interface servira de contrat pour toutes les classes qui implémentent la logique d'accès aux données.
+ - Création de l'interface IDao avec une méthode getData :
 
-Implémentation de l'interface IDao :
+    Nous avons commencé par définir une interface nommée IDao, qui expose une méthode getData. Cette interface servira de contrat pour toutes les classes qui implémentent la logique 
+    d'accès aux données.
 
-Ensuite, nous avons développé une classe DaoImpl qui implémente l'interface IDao. Cette classe contient la logique concrète pour récupérer la date à partir de la source de données, conformément au contrat défini dans IDao.
+ -Implémentation de l'interface IDao :
 
-Création de l'interface IMetier avec une méthode calcul :
+    Ensuite, nous avons développé une classe DaoImpl qui implémente l'interface IDao. Cette classe contient la logique concrète pour récupérer la date à partir de la source de données, 
+    conformément au contrat défini dans IDao.
 
-Nous avons également défini une interface IMetier avec une méthode calcul. Cette interface représente la couche métier de notre application et fournit un moyen d'effectuer des calculs sur les données.
+ -Création de l'interface IMetier avec une méthode calcul :
 
-Implémentation de l'interface IMetier avec un couplage faible :
+    Nous avons également défini une interface IMetier avec une méthode calcul. Cette interface représente la couche métier de notre application et fournit un moyen d'effectuer des 
+    calculs sur les données.
 
-Pour l'implémentation de IMetier, nous avons opté pour un couplage faible en utilisant le principe de l'inversion de contrôle (IoC). Cela nous permet de séparer la logique métier de son implémentation concrète, favorisant ainsi la modularité et la maintenabilité de notre code.
+  -Implémentation de l'interface IMetier avec un couplage faible :
 
-Injection des dépendances :
+    Pour l'implémentation de IMetier, nous avons opté pour un couplage faible en utilisant le principe de l'inversion de contrôle (IoC). Cela nous permet de séparer la logique métier de 
+    son implémentation concrète, favorisant ainsi la modularité et la maintenabilité de notre code.
 
-Nous avons exploré trois méthodes pour injecter les dépendances dans notre application :
+  -Injection des dépendances :
 
-Par instanciation statique : Les dépendances sont instanciées directement dans la classe utilisatrice.
+    Nous avons exploré trois méthodes pour injecter les dépendances dans notre application :
 
-Par instanciation dynamique : Les dépendances sont passées à la classe utilisatrice via son constructeur ou des méthodes d'injection.
+    Par instanciation statique : Les dépendances sont instanciées directement dans la classe utilisatrice.
 
-En utilisant le Framework Spring : Nous avons utilisé le Framework Spring pour gérer l'injection des dépendances. Deux approches ont été abordées :
+    Par instanciation dynamique : Les dépendances sont passées à la classe utilisatrice via son constructeur ou des méthodes d'injection.
 
-Version XML : Les dépendances sont définies dans un fichier de configuration XML.
+    En utilisant le Framework Spring : Nous avons utilisé le Framework Spring pour gérer l'injection des dépendances. Deux approches ont été abordées :
 
-Version annotations : Les dépendances sont définies à l'aide d'annotations dans le code source.
+    Version XML : Les dépendances sont définies dans un fichier de configuration XML.
 
-Ces techniques d'injection de dépendances permettent de rendre notre code plus flexible, testable et facile à maintenir en réduisant le couplage entre les différentes parties de l'application.
+    Version annotations : Les dépendances sont définies à l'aide d'annotations dans le code source.
+
+    Ces techniques d'injection de dépendances permettent de rendre notre code plus flexible, testable et facile à maintenir en réduisant le couplage entre les différentes parties de 
+    l'application.
