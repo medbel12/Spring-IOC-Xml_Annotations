@@ -20,7 +20,7 @@ public class IMetierImpl implements IMetier{
         return res;
     }
 
-    public IMetierImpl( @Qualifier("dao2") IDao dao) {
+    public IMetierImpl( IDao dao) {
         this.dao = dao;
     }
 
